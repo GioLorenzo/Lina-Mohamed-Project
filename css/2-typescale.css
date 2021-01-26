@@ -41,12 +41,11 @@
 html {font-size: 112.5%;} /*18px*/
 
 body {
-  background: white;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   line-height: 1.75;
   letter-spacing: -0.03rem;
-  color: #000000;
+  color: #292929;
   font-size: 18px;
 
 }
@@ -65,17 +64,24 @@ h1 {
   font-weight: 400;
   font-family: 'Helvetica Now Display XBlk', sans-serif;
   letter-spacing: -.4rem;
+  color: black;
 }
 
 h2 {font-size: 6.854rem;}
 
-h3 {font-size: 4.236rem;}
+h3 {
+  font-size: 4.236rem;
+}
 
 h4 {
   font-size: 2rem;
   line-height: 1.2;
+  color: rgb(29, 29, 29);
 }
 
-h5 {font-size: 1.618rem;}
+h5 {
+  font-size: 1.618rem;
+  color: rgb(29, 29, 29);
+}
 
 small, .text_small {font-size: 0.618rem;}
