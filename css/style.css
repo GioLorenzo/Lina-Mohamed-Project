@@ -97,3 +97,17 @@ body {
   text-align: right;
 }
 
+.bottom-r span {
+  display: block;
+  line-height: 1.5;
+}
+
+.bottom-l {
+  float: left;
+}
+
+.bottom-l h4{
+  position: relative;
+  top: 105px;
+}
+
