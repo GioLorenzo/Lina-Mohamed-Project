@@ -111,3 +111,54 @@ body {
   top: 105px;
 }
 
+.arrow {
+  width: 100%;
+  text-align: center;
+  margin: 25% 0 0 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .first-name {
+    font-size: 7rem;
+
+  }
+  .last-name {
+    font-size: 7rem;
+  }
+}
+@media only screen and (max-width: 834px) {
+  .headline-wrap {
+    text-align: right;
+  }
+  .first-name {
+    font-size: 5rem;
+
+  }
+  .last-name {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .headline-wrap {
+    text-align: right;
+  }
+  .first-name {
+    font-size: 3.2rem;
+
+  }
+  .last-name {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .headline-wrap {
+    text-align: right;
+  }
+  .first-name {
+    font-size: 3rem;
+
+  }
+  .last-name {
+    font-size: 3rem;
+  }
+}
