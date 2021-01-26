@@ -82,3 +82,18 @@ body {
   margin: 120px 0 0 0;
 }
 
+.bottom-l,
+.bottom-r {
+  display: inline-block;
+  width: 25%;
+  height: 300px;
+}
+
+.bottom-r {
+  float: right;
+}
+
+.bottom-r div {
+  text-align: right;
+}
+
