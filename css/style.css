@@ -11,4 +11,18 @@ body {
   background-color: rgb(253, 243, 225);
 }
 
+.body-wrap {
+  margin: 125px 125px 0 125px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bio-work-wrap {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+
 
