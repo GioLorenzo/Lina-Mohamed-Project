@@ -16,3 +16,10 @@ const navLinksUp = () => {
   });
 }
 
+const headlineUp = () => {
+  headline.forEach((span) => {
+    span.style.transition = 'transform 1000ms ease';
+    span.style.transform = 'translate(0, 0)';
+  });
+}
+
