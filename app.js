@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
   setTimeout(() => headlineUp(), 300);
   setTimeout(() => subNameUp(), 800);
   setTimeout(() => spansUp(), 900);
-  setTimeout(() => arrowUp(), 2800);
+  setTimeout(() => arrowUp(), 3300);
 
 });
 
