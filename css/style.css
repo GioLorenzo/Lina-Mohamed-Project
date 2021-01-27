@@ -35,16 +35,19 @@ body {
 .work,
 .contact {
   position: relative;
+  overflow: hidden;
 }
 
 .nav a {
-  height: 10px;
+  height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
   text-decoration: none;
   color: black;
   line-height: 1.2;
+  display: inline-block;
+  transform: translate(0, 100%);
 }
  
 
@@ -68,8 +71,9 @@ body {
   transform: scaleX(1);
 }
 
-.nav a.active {
+.nav a:focus {
   cursor: default;
+  outline: none;
 }
 
 .headline-wrap {
@@ -78,8 +82,17 @@ body {
 }
 
 .headline-wrap h1 {
+  position: relative;
+  overflow: hidden;
   line-height: .76;
   margin: 120px 0 0 0;
+}
+
+span.up {
+  position: relative;
+  display: inline-block;
+  right: 7px;
+  transform: translate(0, 100%);
 }
 
 .bottom-l,
@@ -95,11 +108,27 @@ body {
 
 .bottom-r div {
   text-align: right;
+  margin: 3rem 0;
+  padding: 0;
 }
 
 .bottom-r span {
   display: block;
   line-height: 1.5;
+}
+
+.bottom-r h5 {
+  margin: 0;
+
+}
+
+.fullname {
+  overflow: hidden;
+}
+
+.sub-name {
+  display: inline-block;
+  transform: translate(0, 100%);
 }
 
 .bottom-l {
