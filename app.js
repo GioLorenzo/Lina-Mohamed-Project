@@ -1,7 +1,8 @@
 const headline = document.querySelectorAll('.up');
-const navLinks = document.querySelectorAll('.link-up');
+const nav = document.querySelector('.nav');
 const subName = document.querySelector('.sub-name');
-
+const bottomLText = document.querySelector('.bottom-l-text span');
+const spans = document.querySelectorAll
 
 window.addEventListener('load', () => {
   navLinksUp();
@@ -10,10 +11,8 @@ window.addEventListener('load', () => {
 });
 
 const navLinksUp = () => {
-  navLinks.forEach((a) => {
-    a.style.transition = 'transform 1000ms ease';
-    a.style.transform = 'translate(0, 0)';
-  });
+  nav.style.transition = 'transform 1000ms ease';
+  nav.style.transform = 'translateY(0)';
 }
 
 const headlineUp = () => {

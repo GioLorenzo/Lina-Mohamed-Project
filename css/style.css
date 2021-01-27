@@ -15,9 +15,15 @@ body {
   margin: 125px 125px 0 125px;
 }
 
+header {
+  overflow: hidden;
+}
+
 .nav {
   display: flex;
+  line-height: 1;
   justify-content: space-between;
+  transform: translateY(100%);
 }
 
 .bio-work-wrap {
@@ -38,6 +44,12 @@ body {
   overflow: hidden;
 }
 
+.nav a:hover::before,
+.nav a:focus::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 .nav a {
   height: 100%;
   width: 100%;
@@ -45,9 +57,9 @@ body {
   margin: 0;
   text-decoration: none;
   color: black;
-  line-height: 1.2;
+  line-height: 100%;
   display: inline-block;
-  transform: translate(0, 100%);
+  transform-origin: top;
 }
  
 
@@ -65,11 +77,6 @@ body {
   transition: 500ms ease-out;
 }
 
-.nav a:hover::before,
-.nav a:focus::before {
-  visibility: visible;
-  transform: scaleX(1);
-}
 
 .nav a:focus {
   cursor: default;
@@ -106,24 +113,27 @@ span.up {
   float: right;
 }
 
-.bottom-r div {
+.bottom-r .fullname {
   text-align: right;
-  margin: 3rem 0;
+  margin: 2rem 0;
   padding: 0;
 }
 
+.bottom-r .blurb {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
 .bottom-r span {
-  display: block;
+  display: inline-block;
   line-height: 1.5;
 }
 
-.bottom-r h5 {
-  margin: 0;
-
-}
-
-.fullname {
+.sub-name-wrap {
   overflow: hidden;
+  background-color: pink;
+  
 }
 
 .sub-name {
@@ -133,17 +143,43 @@ span.up {
 
 .bottom-l {
   float: left;
+  background-color: pink;
+  text-align:left;
+  position: relative;
 }
 
 .bottom-l h4{
   position: relative;
-  top: 105px;
+  top: 61%;
+  line-height: 1.1;
+  padding: 0;
+  margin: 0;
+}
+
+.span-wrap {
+  overflow: hidden;
+}
+
+.span-wrap .span1,
+.span-wrap .span2,
+.span-wrap .span3 {
+  display: inline-block;
+  transform: translateY(100%);
 }
 
 .arrow {
   width: 100%;
   text-align: center;
   margin: 25% 0 0 0;
+}
+
+@keyframes slide{
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
