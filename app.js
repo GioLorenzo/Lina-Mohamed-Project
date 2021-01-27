@@ -23,3 +23,8 @@ const headlineUp = () => {
   });
 }
 
+const subNameUp = () => {
+  subName.style.transition = 'transform 1000ms ease';
+  subName.style.transform = 'translate(0, 0)';
+}
+
