@@ -2,12 +2,17 @@ const headline = document.querySelectorAll('.up');
 const nav = document.querySelector('.nav');
 const subName = document.querySelector('.sub-name');
 const bottomLText = document.querySelector('.bottom-l-text span');
-const spans = document.querySelectorAll
+const spans = document.querySelectorAll(".span-wrap span");
+const arrow = document.querySelector('.arrow');
+
 
 window.addEventListener('load', () => {
   navLinksUp();
-  setTimeout(() => headlineUp(), 200);
-  setTimeout(() => subNameUp(), 500);
+  setTimeout(() => headlineUp(), 300);
+  setTimeout(() => subNameUp(), 800);
+  setTimeout(() => spansUp(), 900);
+  setTimeout(() => arrowUp(), 2800);
+
 });
 
 const navLinksUp = () => {
@@ -26,4 +31,19 @@ const subNameUp = () => {
   subName.style.transition = 'transform 1000ms ease';
   subName.style.transform = 'translate(0, 0)';
 }
+
+const spansUp = () => {
+  spans.forEach((x, i) => {
+    setTimeout(() => {
+      x.style.transition = 'transform 1000ms ease';
+      x.style.transform = 'translate(0, 0)';
+    }, i * 150)
+  })
+}
+
+const arrowUp = () => {
+  arrow.style.transition = 'transform 1000ms ease';
+  arrow.style.transform = 'translate(0, 0)';
+}
+
 
