@@ -1,8 +1,6 @@
 @import "1-normalize.scss";
 @import "2-typescale.scss";
 
-$first_color: rgba(0, 0, 255, 0.5);
-$second_color: rgba(255, 0, 0, 0.5);
 
 * {
   padding: 0;
@@ -23,6 +21,7 @@ body {
 
 .body-wrap {
   margin: 125px 125px 0 125px;
+  background-color: rgb(255, 239, 211);
   height: 100vh;
 }
 
@@ -213,39 +212,73 @@ span.up {
 }
 
 .works {
-  background: pink;
-  position: relative;
+  background: black;
   height: 200vh;
   text-align: center;
   display: flex;
   justify-content: center;
   flex-flow: column;
   align-items: center;
+  z-index: -1;
 }
 
 .work-headline {
   text-transform: uppercase;
-  border-bottom: 1px solid black;
-  margin: 2em 0 0 0;
+  margin: 250px 0 0 0;
   padding: 0;
-  line-height: 0;
+  line-height: 1;
+  width: calc(100% - 250px);
+}
+
+.work-headline p {
+  padding: 0 2em 0 0;
+  color:  rgb(255, 243, 223);
+  float: left;
+  border-top: 3px solid  rgb(255, 243, 223);
+  font-size: 40px;
+  font-weight: 900;
 }
 
 .work-container {
-  background: blue;
-  opacity: .8;
   height: calc(100% - 250px);
   width: calc(100% - 250px);
-  position: relative;
-  margin: 125px;
+  margin: 125px 125px 250px 125px;
   display: grid;
-  grid-gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+  grid-gap: 3em;
+  grid-template-columns: repeat(auto-fit, minmax(29em, 1fr));
+  position: relative;
+  z-index: 1;
 }
 
 .piece-wrap {
-  background-color: brown;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 2px;
+  transform: translate(10px, 10px);
+  background-color: pink;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  transition: all 300ms ease-out;
+  cursor: pointer;
+  box-shadow: rgb(255, 239, 211) 0 0 0 0;
 }
+
+.piece-wrap:hover {
+  box-shadow: rgb(255, 239, 211) -15px -15px 0 0;
+  transform: translate(20px, 20px);
+  transition: all 200ms ease;
+}
+// .piece-wrap:after {
+//   content: '';
+//   background-color: rgb(255, 255, 255);
+//   transform: translate(-10px, -10px);
+//   z-index: -1;
+//   height: 100%;
+//   width: 100%;
+//   display: block;
+//   position: absolute;
+// }
+
 
 @media only screen and (max-width: 1200px) {
   .first-name {

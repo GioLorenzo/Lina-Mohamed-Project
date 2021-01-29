@@ -449,6 +449,7 @@ body {
 
 .body-wrap {
   margin: 125px 125px 0 125px;
+  background-color: #ffefd3;
   height: 100vh;
 }
 
@@ -681,8 +682,7 @@ span.up {
 }
 
 .works {
-  background: pink;
-  position: relative;
+  background: black;
   height: 200vh;
   text-align: center;
   display: -webkit-box;
@@ -698,32 +698,62 @@ span.up {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: -1;
 }
 
 .work-headline {
   text-transform: uppercase;
-  border-bottom: 1px solid black;
-  margin: 2em 0 0 0;
+  margin: 250px 0 0 0;
   padding: 0;
-  line-height: 0;
+  line-height: 1;
+  width: calc(100% - 250px);
+}
+
+.work-headline p {
+  padding: 0 2em 0 0;
+  color: #fff3df;
+  float: left;
+  border-top: 3px solid #fff3df;
+  font-size: 40px;
+  font-weight: 900;
 }
 
 .work-container {
-  background: blue;
-  opacity: .8;
   height: calc(100% - 250px);
   width: calc(100% - 250px);
-  position: relative;
-  margin: 125px;
+  margin: 125px 125px 250px 125px;
   display: -ms-grid;
   display: grid;
-  grid-gap: 2em;
-  -ms-grid-columns: (minmax(32%, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+  grid-gap: 3em;
+  -ms-grid-columns: (minmax(29em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(29em, 1fr));
+  position: relative;
+  z-index: 1;
 }
 
 .piece-wrap {
-  background-color: brown;
+  border: 2px solid black;
+  border-radius: 2px;
+  -webkit-transform: translate(10px, 10px);
+          transform: translate(10px, 10px);
+  background-color: pink;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  cursor: pointer;
+  -webkit-box-shadow: #ffefd3 0 0 0 0;
+          box-shadow: #ffefd3 0 0 0 0;
+}
+
+.piece-wrap:hover {
+  -webkit-box-shadow: #ffefd3 -15px -15px 0 0;
+          box-shadow: #ffefd3 -15px -15px 0 0;
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 @media only screen and (max-width: 1200px) {
