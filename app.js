@@ -18,6 +18,7 @@ window.addEventListener('load', () => {
 const navLinksUp = () => {
   nav.style.transition = 'transform 1000ms ease';
   nav.style.transform = 'translateY(0)';
+  setTimeout(() => nav.children[0].firstChild.nextSibling.firstChild.focus(), 800);
 }
 
 const headlineUp = () => {
@@ -37,7 +38,7 @@ const spansUp = () => {
     setTimeout(() => {
       x.style.transition = 'transform 1000ms ease';
       x.style.transform = 'translate(0, 0)';
-    }, i * 150)
+    }, i * 300)
   })
 }
 
@@ -45,5 +46,7 @@ const arrowUp = () => {
   arrow.style.transition = 'transform 1000ms ease';
   arrow.style.transform = 'translate(0, 0)';
 }
+
+
 
 
