@@ -7,6 +7,7 @@ const arrow = document.querySelector('.arrow');
 const selectedWorks = document.querySelector('.selected-works');
 
 
+
 window.addEventListener('load', () => {
   navLinksUp();
   setTimeout(() => headlineUp(), 300);
@@ -50,6 +51,11 @@ const arrowUp = () => {
 const selectedWorksUp = () => {
   selectedWorks.style.transition = 'transform 1000ms ease';
   selectedWorks.style.transform = 'translate(0, 0)';
+}
+
+const pieceWrapUp = () => {
+  pieceWrap.style.opacity = '1';
+  pieceWrap.style.tranform = 'translateY(0)';
 }
 
 function scrollAppear() {
