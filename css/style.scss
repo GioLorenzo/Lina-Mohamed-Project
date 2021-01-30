@@ -24,7 +24,7 @@ body {
   text-align: center;
   margin: 125px 125px 0 125px;
   background-color: rgb(255, 239, 211);
-  height: 100vh;
+  height: 90vh;
 }
 
 header {
@@ -256,7 +256,7 @@ span.up {
   height: 300vh;
   width: 300vw;
   /* We're using opacity in place of a transparent image */
-  opacity: 0.05;
+  opacity: 0.03;
   /* We'll need this when the animation kicks in to hold the position of the texture */
   position: fixed;
   left: -1000px;
