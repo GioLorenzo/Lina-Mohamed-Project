@@ -6,6 +6,7 @@ const spans = document.querySelectorAll(".span-wrap span");
 const arrow = document.querySelector('.arrow');
 const selectedWorks = document.querySelector('.selected-works');
 const workContainer = document.querySelector('.work-container');
+const workSection = document.querySelector('.works');
 
 
 window.addEventListener('load', () => {
@@ -13,8 +14,34 @@ window.addEventListener('load', () => {
   setTimeout(() => headlineUp(), 300);
   setTimeout(() => subNameUp(), 800);
   setTimeout(() => spansUp(), 900);
-  setTimeout(() => arrowUp(), 3700);
+  setTimeout(() => arrowUp(), 3050);
 });
+
+document.querySelector('.work-a').addEventListener('click', () => smoothScroll(workSection, 1000));
+
+function smoothScroll(target,duration){
+    var targetPosition = target.getBoundingClientRect().top;
+    var startPosition = window.pageYOffset;
+    var distance = targetPosition - startPosition;
+    var startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+        var run = ease(timeElapsed,startPosition,distance,duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+        t /= d/2;
+	    if (t < 1) return c/2*t*t*t + b;
+	    t -= 2;
+	    return c/2*(t*t*t + 2) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
 
 const navLinksUp = () => {
   nav.style.transition = 'transform 1000ms ease';
@@ -50,7 +77,7 @@ const arrowUp = () => {
 
 const selectedWorksUp = () => {
   selectedWorks.style.transition = 'transform 1000ms ease';
-  selectedWorks.style.transform = 'translate(0, 0)';
+  selectedWorks.style.transform = 'translateY(0)';
 }
 
 const workContainerUp = () => {

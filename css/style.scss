@@ -136,7 +136,7 @@ span.up {
   padding: 0;
   margin: 0;
   position: relative;
-  top: 10rem;
+  top: 6rem;
   font-weight: 900;
 }
 
@@ -273,10 +273,10 @@ span.up {
 }
 
 .work-headline p {
-  padding: 0 0 0 2em;
+  padding: 0;
   color:  rgb(255, 243, 223);
   float: right;
-  font-size: 40px;
+  font-size: 150%;
   font-weight: 900;
   transform: translate(0, 100%);
 }
@@ -295,23 +295,23 @@ span.up {
 }
 
 .piece-wrap {
-  border-radius: 2px;
+  border-radius: 3px;
   transform: translate(10px, 10px);
   background-color: #ffc0cb;
   width: 100%;
   height: 100%;
   display: inline-block;
   cursor: pointer;
-  box-shadow: rgb(255, 239, 211) 0 0 0 0;
+  box-shadow: rgb(255, 243, 223) 0 0 0 0;
   transition: all 400ms ease;
-  border: 4px solid black;
+  border: 3px solid black;
 }
 
 .piece-wrap:hover {
-  box-shadow: rgb(255, 239, 211) -15px -15px 0 0;
+  box-shadow: rgb(255, 243, 223) -20px -20px 0 0;
   transform: translate(20px, 20px);
   transition: all 200ms ease;
-  background-color:  #ffc9d1;
+  background-color:  rgb(255, 238, 0);
 }
 
 @media only screen and (max-width: 1200px) {

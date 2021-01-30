@@ -577,7 +577,7 @@ span.up {
   padding: 0;
   margin: 0;
   position: relative;
-  top: 10rem;
+  top: 6rem;
   font-weight: 900;
 }
 
@@ -823,10 +823,10 @@ span.up {
 }
 
 .work-headline p {
-  padding: 0 0 0 2em;
+  padding: 0;
   color: #fff3df;
   float: right;
-  font-size: 40px;
+  font-size: 150%;
   font-weight: 900;
   -webkit-transform: translate(0, 100%);
           transform: translate(0, 100%);
@@ -849,7 +849,7 @@ span.up {
 }
 
 .piece-wrap {
-  border-radius: 2px;
+  border-radius: 3px;
   -webkit-transform: translate(10px, 10px);
           transform: translate(10px, 10px);
   background-color: #ffc0cb;
@@ -857,21 +857,21 @@ span.up {
   height: 100%;
   display: inline-block;
   cursor: pointer;
-  -webkit-box-shadow: #ffefd3 0 0 0 0;
-          box-shadow: #ffefd3 0 0 0 0;
+  -webkit-box-shadow: #fff3df 0 0 0 0;
+          box-shadow: #fff3df 0 0 0 0;
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
-  border: 4px solid black;
+  border: 3px solid black;
 }
 
 .piece-wrap:hover {
-  -webkit-box-shadow: #ffefd3 -15px -15px 0 0;
-          box-shadow: #ffefd3 -15px -15px 0 0;
+  -webkit-box-shadow: #fff3df -20px -20px 0 0;
+          box-shadow: #fff3df -20px -20px 0 0;
   -webkit-transform: translate(20px, 20px);
           transform: translate(20px, 20px);
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
-  background-color: #ffc9d1;
+  background-color: #ffee00;
 }
 
 @media only screen and (max-width: 1200px) {
