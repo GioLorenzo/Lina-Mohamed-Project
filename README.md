@@ -1,6 +1,5 @@
 # Lina-Mohamed-Project
 Static, responsive, and dynamic artist showcase landing page!
-----------by Giordano Lorenzo-----------
 ──────────────────██████────────────────
 ─────────────────████████─█─────────────
 ─────────────██████████████─────────────
@@ -31,3 +30,4 @@ Static, responsive, and dynamic artist showcase landing page!
 ───────██████████████████████████████───
 ───────██████████████████████████───────
 ─────────────███████████████────────────
+With love, by Giordano Lorenzo.
