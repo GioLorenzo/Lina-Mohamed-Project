@@ -5,7 +5,7 @@ const bottomLText = document.querySelector('.bottom-l-text span');
 const spans = document.querySelectorAll(".span-wrap span");
 const arrow = document.querySelector('.arrow');
 const selectedWorks = document.querySelector('.selected-works');
-const workContainer = document.querySelectorAll('.piece-wrap');
+const workContainer = document.querySelector('.work-container');
 
 
 window.addEventListener('load', () => {
@@ -75,9 +75,7 @@ function selectedWorksListen() {
 }
 
 function workContainerListen() {
-  let workContainerPosition = workContainer.map((x) => console.log(x))
-  console.log(workContainerPosition);
-  console.log(workContainerPosition);
+  const workContainerPosition = workContainer.getBoundingClientRect().top;
   const screenPosition = window.innerHeight / 1.5;
   if (workContainerPosition < screenPosition) {
     workContainerUp();

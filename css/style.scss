@@ -220,7 +220,7 @@ span.up {
 }
 
 .works {
-  background: #000000;
+  background: #080808;
   height: 200vh;
   width: 100%;
   text-align: center;
@@ -290,7 +290,8 @@ span.up {
   grid-template-columns: repeat(auto-fit, minmax(29em, 1fr));
   position: relative;
   z-index: 1;
-  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .piece-wrap {
@@ -304,8 +305,6 @@ span.up {
   box-shadow: rgb(255, 239, 211) 0 0 0 0;
   transition: all 400ms ease;
   border: 4px solid black;
-  opacity: 0;
-  transform: translateX(200px);
 }
 
 .piece-wrap:hover {
