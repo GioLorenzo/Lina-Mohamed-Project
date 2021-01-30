@@ -19,11 +19,15 @@ body {
   color:  rgb(255, 243, 223);
 }
 
+
 .body-wrap {
+  text-align: center;
   margin: 125px 125px 0 125px;
   background-color: rgb(255, 239, 211);
   height: 100vh;
 }
+
+
 
 header {
   overflow: hidden;
@@ -34,6 +38,8 @@ header {
   line-height: 1.2;
   justify-content: space-between;
   transform: translateY(100%);
+  z-index: 99;
+  position: relative;
 }
 
 .bio-work-wrap {
@@ -58,6 +64,7 @@ header {
 .nav a:focus::before {
   visibility: visible;
   transform: scaleX(1);
+  z-index: 99;
 }
 
 .nav a {
@@ -201,10 +208,12 @@ span.up {
   position: relative;
   transform: translateY(120%);
   color: black;
+  z-index: 99;
 }
 
 .arrow i {
   animation: bounce 1.5s infinite ease-out;
+  z-index: 99;
 }
 
 .space {
@@ -220,6 +229,23 @@ span.up {
   flex-flow: column;
   align-items: center;
   z-index: -1;
+  overflow: hidden;
+}
+
+.works::after {
+  /* content is required when using :after */
+  content: "";
+  /* The grainy image */
+  background-image: url("../assets/img/paper_1/paper_1.png");
+  /* Specify a height and width above and beyond the page header for movement */
+  height: 100vh;
+  width: 100vw;
+  /* We're using opacity in place of a transparent image */
+  opacity: 0.1;
+  /* We'll need this when the animation kicks in to hold the position of the texture */
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 .work-headline {
@@ -253,19 +279,21 @@ span.up {
 .piece-wrap {
   border-radius: 2px;
   transform: translate(10px, 10px);
-  background-color: pink;
+  background-color: #ffc0cb;
   width: 100%;
   height: 100%;
   display: inline-block;
-  transition: all 300ms ease-out;
   cursor: pointer;
   box-shadow: rgb(255, 239, 211) 0 0 0 0;
+  transition: all 400ms ease;
+  border: 4px solid black;
 }
 
 .piece-wrap:hover {
-  box-shadow: rgb(255, 239, 211) -15px -15px 0 0;
+  box-shadow: rgb(255, 239, 211) -15px -15px 3px 0;
   transform: translate(20px, 20px);
   transition: all 200ms ease;
+  background-color:  #ffc9d1;
 }
 // .piece-wrap:after {
 //   content: '';
