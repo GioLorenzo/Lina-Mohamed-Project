@@ -2,10 +2,7 @@
 Static, responsive, and dynamic artist showcase landing page!
 
 
-
-
-
-                   888       888 d8b 888    888           888                                   
+.                  888       888 d8b 888    888           888                                   
                    888   o   888 Y8P 888    888           888                                   
                    888  d8b  888     888    888           888                                   
                    888 d888b 888 888 888888 88888b.       888      .d88b.  888  888  .d88b.     
