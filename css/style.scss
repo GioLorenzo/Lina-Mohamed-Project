@@ -187,7 +187,7 @@ span.up {
 }
 
 .arrow-wrap {
-  padding-top: 10px;
+  padding: 15px 0 0 0;
   overflow: hidden;
   width: calc(100% - 250px);
   display: block;
@@ -234,7 +234,6 @@ span.up {
   padding: 0 0 0 2em;
   color:  rgb(255, 243, 223);
   float: right;
-  border-top: 3px solid  rgb(255, 243, 223);
   font-size: 40px;
   font-weight: 900;
   transform: translateY(100%);

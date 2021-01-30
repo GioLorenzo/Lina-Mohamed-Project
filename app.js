@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
   setTimeout(() => headlineUp(), 300);
   setTimeout(() => subNameUp(), 800);
   setTimeout(() => spansUp(), 900);
-  setTimeout(() => arrowUp(), 2300);
+  setTimeout(() => arrowUp(), 3700);
 });
 
 const navLinksUp = () => {
@@ -43,7 +43,7 @@ const spansUp = () => {
 }
 
 const arrowUp = () => {
-  arrow.style.transition = 'transform 1000ms ease';
+  arrow.style.transition = 'transform 600ms ease';
   arrow.style.transform = 'translate(0, 0)';
 }
 
@@ -54,7 +54,7 @@ const selectedWorksUp = () => {
 
 function scrollAppear() {
   const selectedWorksPosition = selectedWorks.getBoundingClientRect().top;
-  const screenPosition = window.innerHeight/1.4;
+  const screenPosition = window.innerHeight/1.1;
     
 
   if (selectedWorksPosition < screenPosition) {
