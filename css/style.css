@@ -710,9 +710,9 @@ span.up {
 }
 
 .work-headline p {
-  padding: 0 2em 0 0;
+  padding: 0 0 0 2em;
   color: #fff3df;
-  float: left;
+  float: right;
   border-top: 3px solid #fff3df;
   font-size: 40px;
   font-weight: 900;
@@ -732,7 +732,6 @@ span.up {
 }
 
 .piece-wrap {
-  border: 2px solid black;
   border-radius: 2px;
   -webkit-transform: translate(10px, 10px);
           transform: translate(10px, 10px);
