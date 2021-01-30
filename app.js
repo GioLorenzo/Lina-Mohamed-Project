@@ -4,6 +4,7 @@ const subName = document.querySelector('.sub-name');
 const bottomLText = document.querySelector('.bottom-l-text span');
 const spans = document.querySelectorAll(".span-wrap span");
 const arrow = document.querySelector('.arrow');
+const selectedWorks = document.querySelector('.selected-works');
 
 
 window.addEventListener('load', () => {
@@ -11,8 +12,7 @@ window.addEventListener('load', () => {
   setTimeout(() => headlineUp(), 300);
   setTimeout(() => subNameUp(), 800);
   setTimeout(() => spansUp(), 900);
-  setTimeout(() => arrowUp(), 2000);
-
+  setTimeout(() => arrowUp(), 2300);
 });
 
 const navLinksUp = () => {
@@ -47,6 +47,22 @@ const arrowUp = () => {
   arrow.style.transform = 'translate(0, 0)';
 }
 
+const selectedWorksUp = () => {
+  selectedWorks.style.transition = 'transform 1000ms ease';
+  selectedWorks.style.transform = 'translate(0, 0)';
+}
+
+function scrollAppear() {
+  const selectedWorksPosition = selectedWorks.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight/1.4;
+    
+
+  if (selectedWorksPosition < screenPosition) {
+    selectedWorksUp();
+  }
+}
+
+window.addEventListener('scroll', scrollAppear);
 
 
 
