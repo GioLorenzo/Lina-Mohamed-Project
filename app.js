@@ -78,6 +78,7 @@ const arrowUp = () => {
 const selectedWorksUp = () => {
   selectedWorks.style.transition = 'transform 1000ms ease';
   selectedWorks.style.transform = 'translateY(0)';
+
 }
 
 const workContainerUp = () => {
@@ -103,7 +104,7 @@ function selectedWorksListen() {
 
 function workContainerListen() {
   const workContainerPosition = workContainer.getBoundingClientRect().top;
-  const screenPosition = window.innerHeight / 1.5;
+  const screenPosition = window.innerHeight / 1.3;
   if (workContainerPosition < screenPosition) {
     workContainerUp();
   }

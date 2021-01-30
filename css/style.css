@@ -807,7 +807,7 @@ span.up {
   height: 300vh;
   width: 300vw;
   /* We're using opacity in place of a transparent image */
-  opacity: 0.05;
+  opacity: 0.03;
   /* We'll need this when the animation kicks in to hold the position of the texture */
   position: fixed;
   left: -1000px;
@@ -815,21 +815,23 @@ span.up {
 }
 
 .work-headline {
-  text-transform: uppercase;
   margin: 250px 0 0 0;
   padding: 0;
   width: calc(100% - 250px);
   overflow: hidden;
 }
 
-.work-headline p {
-  padding: 0;
+.work-headline h3 {
+  letter-spacing: -0.2rem;
   color: #fff3df;
   float: right;
-  font-size: 150%;
-  font-weight: 900;
+  padding: 0 5px 0 0;
+  font-size: 6rem;
+  font-weight: 1000;
   -webkit-transform: translate(0, 100%);
           transform: translate(0, 100%);
+  height: 100%;
+  margin: 0;
 }
 
 .work-container {
