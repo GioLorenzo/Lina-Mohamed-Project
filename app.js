@@ -5,7 +5,7 @@ const bottomLText = document.querySelector('.bottom-l-text span');
 const spans = document.querySelectorAll(".span-wrap span");
 const arrow = document.querySelector('.arrow');
 const selectedWorks = document.querySelector('.selected-works');
-
+const workContainer = document.querySelectorAll('.piece-wrap');
 
 
 window.addEventListener('load', () => {
@@ -44,7 +44,7 @@ const spansUp = () => {
 }
 
 const arrowUp = () => {
-  arrow.style.transition = 'transform 600ms ease';
+  arrow.style.transition = 'transform 1000ms ease';
   arrow.style.transform = 'translate(0, 0)';
 }
 
@@ -53,22 +53,34 @@ const selectedWorksUp = () => {
   selectedWorks.style.transform = 'translate(0, 0)';
 }
 
-const pieceWrapUp = () => {
-  pieceWrap.style.opacity = '1';
-  pieceWrap.style.tranform = 'translateY(0)';
+const workContainerUp = () => {
+  workContainer.style.transition = 'all 1000ms ease'
+  workContainer.style.opacity = '1';
+  workContainer.style.transform = 'translateY(0)';
 }
 
 function scrollAppear() {
-  const selectedWorksPosition = selectedWorks.getBoundingClientRect().top;
-  const screenPosition = window.innerHeight/1.1;
-    
+  selectedWorksListen();
+  workContainerListen();
+}
 
+window.addEventListener('scroll', scrollAppear);
+
+function selectedWorksListen() {
+  const selectedWorksPosition = selectedWorks.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.2;
   if (selectedWorksPosition < screenPosition) {
     selectedWorksUp();
   }
 }
 
-window.addEventListener('scroll', scrollAppear);
-
-
+function workContainerListen() {
+  let workContainerPosition = workContainer.map((x) => console.log(x))
+  console.log(workContainerPosition);
+  console.log(workContainerPosition);
+  const screenPosition = window.innerHeight / 1.5;
+  if (workContainerPosition < screenPosition) {
+    workContainerUp();
+  }
+}
 

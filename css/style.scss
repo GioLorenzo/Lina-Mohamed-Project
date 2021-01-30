@@ -256,7 +256,7 @@ span.up {
   height: 300vh;
   width: 300vw;
   /* We're using opacity in place of a transparent image */
-  opacity: 0.03;
+  opacity: 0.05;
   /* We'll need this when the animation kicks in to hold the position of the texture */
   position: fixed;
   left: -1000px;
@@ -290,7 +290,7 @@ span.up {
   grid-template-columns: repeat(auto-fit, minmax(29em, 1fr));
   position: relative;
   z-index: 1;
-  transform: translateY(20px);
+  overflow: hidden;
 }
 
 .piece-wrap {
@@ -304,6 +304,8 @@ span.up {
   box-shadow: rgb(255, 239, 211) 0 0 0 0;
   transition: all 400ms ease;
   border: 4px solid black;
+  opacity: 0;
+  transform: translateX(200px);
 }
 
 .piece-wrap:hover {
