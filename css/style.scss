@@ -221,7 +221,7 @@ span.up {
 
 .works {
   background: #080808;
-  height: 200vh;
+  height: 250vh;
   width: 100%;
   text-align: center;
   display: flex;
@@ -288,8 +288,8 @@ span.up {
   width: calc(100% - 250px);
   margin: 125px 125px 250px 125px;
   display: grid;
-  grid-gap: 3em;
-  grid-template-columns: repeat(auto-fit, minmax(29em, 1fr));
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
   position: relative;
   z-index: 1;
   opacity: 0;
@@ -299,7 +299,7 @@ span.up {
 .piece-wrap {
   border-radius: 2px;
   // transform: translate(10px, 10px);
-  background-color: #ffc0cb;
+  background-color: #13EBE0;
   width: 100%;
   height: 100%;
   display: inline-block;
@@ -313,7 +313,6 @@ span.up {
   box-shadow: rgb(255, 243, 223) -15px 15px 0 0;
   transform: translate(10px, -10px);
   transition: all 200ms ease;
-  background-color:  rgb(255, 238, 0);
 }
 
 #contact-section {
@@ -340,7 +339,7 @@ span.up {
   width: 50%;
   height: 100%;
   position: relative;
-  // background-color: pink;
+
   h3 {
     font-size: 6rem;
     color: #0e0e0e;
@@ -389,6 +388,7 @@ span.up {
     align-items: center;
     justify-content: center;
     position: relative;
+    border-radius: 5px;
 
     .label {
       margin: 0;
@@ -414,17 +414,18 @@ span.up {
       font-family: monospace;
       transition: all 500ms ease;
       resize: none;
-      font-size: 28px;
+      font-size: 24px;
     }
 
     .email-label {
-      width: 80%;
-      height: 100%;
+      width: 60%;
+      height: 30%;
+      margin-top: 15px;
     }
 
     .message-label {
       height: 100%;
-      width: 100%;
+      width: 80%;
     }
     input:focus, textarea:focus {
       box-shadow: rgba(0, 0, 0, 0.9) -10px 10px 0 0;
@@ -447,11 +448,15 @@ span.up {
       margin: 0;
     }
 
+    .email-input:-webkit-autofill {
+      background-color:transparent;
+    }
+
     .button-wrap {
       display: flex;
       justify-content: center;
-      align-items: flex-end;
-      height: 40%;
+      align-items: center;
+      height: 50%;
 
       button {
         height: 3em;
@@ -461,6 +466,7 @@ span.up {
         background-color: rgb(255, 239, 211);
         transition: all 200ms ease;
         cursor: pointer;
+        color: #080808;
         box-shadow: rgba(0, 0, 0, 0.9) 0 0 0 0;
       }
       button:hover {
