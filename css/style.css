@@ -451,7 +451,7 @@ body {
   text-align: center;
   margin: 125px 125px 0 125px;
   background-color: #ffefd3;
-  height: 90vh;
+  height: 100vh;
 }
 
 header {
@@ -852,8 +852,6 @@ span.up {
 
 .piece-wrap {
   border-radius: 3px;
-  -webkit-transform: translate(10px, 10px);
-          transform: translate(10px, 10px);
   background-color: #ffc0cb;
   width: 100%;
   height: 100%;
@@ -867,13 +865,79 @@ span.up {
 }
 
 .piece-wrap:hover {
-  -webkit-box-shadow: #fff3df -20px -20px 0 0;
-          box-shadow: #fff3df -20px -20px 0 0;
-  -webkit-transform: translate(20px, 20px);
-          transform: translate(20px, 20px);
+  -webkit-box-shadow: #fff3df -15px 15px 0 0;
+          box-shadow: #fff3df -15px 15px 0 0;
+  -webkit-transform: translate(10px, -10px);
+          transform: translate(10px, -10px);
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
   background-color: #ffee00;
+}
+
+#contact-section {
+  width: 100vw;
+  height: 75vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.contact-section-wrap {
+  margin: 125px;
+  width: 100%;
+  height: calc(100% - 250px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-section-text {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.contact-section-text h3 {
+  font-size: 6rem;
+  color: #0e0e0e;
+  margin: 0;
+  padding: 0 0 1rem 0;
+  line-height: 1;
+  letter-spacing: -.2rem;
+  text-align: left;
+}
+
+.contact-section-text div {
+  position: absolute;
+  bottom: 0px;
+}
+
+.contact-section-text p {
+  font-size: 2em;
+  line-height: 1.2;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 0 0;
+  font-weight: 900;
+  letter-spacing: -0.07rem;
+}
+
+.contact-section-form {
+  width: 50%;
+  height: 100%;
 }
 
 @media only screen and (max-width: 1200px) {
