@@ -82,10 +82,10 @@ header {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
+  height: 2px;
   bottom: 0;
   left: 0;
-  background: black;
+  background: rgb(29, 29, 29);
   visibility: hidden;
   border-radius: 5px;
   transform: scaleX(0);
@@ -297,7 +297,7 @@ span.up {
 }
 
 .piece-wrap {
-  border-radius: 3px;
+  border-radius: 2px;
   // transform: translate(10px, 10px);
   background-color: #ffc0cb;
   width: 100%;
@@ -380,6 +380,95 @@ span.up {
 .contact-section-form {
   width: 50%;
   height: 100%;
+
+  form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .label {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      h5 {
+        padding: 0 50px;
+        line-height: 1.25;
+        margin: 0 0 1em 0;
+        color: rgb(10, 10, 10);
+        border-bottom: 2px solid rgb(12, 12, 12);
+      }
+    }
+
+    input, textarea {
+      background-color: rgb(255, 239, 211);
+      outline: none;
+      border: 2px solid rgb(12, 12, 12);
+      border-radius: 2px;
+      font-family: monospace;
+      transition: all 500ms ease;
+      resize: none;
+      font-size: 28px;
+    }
+
+    .email-label {
+      width: 80%;
+      height: 100%;
+    }
+
+    .message-label {
+      height: 100%;
+      width: 100%;
+    }
+    input:focus, textarea:focus {
+      box-shadow: rgba(0, 0, 0, 0.9) -10px 10px 0 0;
+      transform: translate(5px, -5px);
+    }
+
+    input::placeholder {
+      color: black;
+      font-weight: 900;
+    }
+
+    .email-input {
+      width: 80%;
+      height: 25%;
+      margin: 0;
+    }
+    .message-input {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    .button-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 40%;
+
+      button {
+        height: 3em;
+        width: 10em;
+        border-radius: 2px;
+        border: 2px solid rgb(12, 12, 12);
+        background-color: rgb(255, 239, 211);
+        transition: all 200ms ease;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.9) 0 0 0 0;
+      }
+      button:hover {
+        box-shadow: rgba(0, 0, 0, 0.9) -4px 4px 0 0;
+        transform: translate(2px, -2px);
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1200px) {

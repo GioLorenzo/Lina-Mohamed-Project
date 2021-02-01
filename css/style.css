@@ -523,10 +523,10 @@ header {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
+  height: 2px;
   bottom: 0;
   left: 0;
-  background: black;
+  background: #1d1d1d;
   visibility: hidden;
   border-radius: 5px;
   -webkit-transform: scaleX(0);
@@ -851,7 +851,7 @@ span.up {
 }
 
 .piece-wrap {
-  border-radius: 3px;
+  border-radius: 2px;
   background-color: #ffc0cb;
   width: 100%;
   height: 100%;
@@ -953,6 +953,145 @@ span.up {
 .contact-section-form {
   width: 50%;
   height: 100%;
+}
+
+.contact-section-form form {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.contact-section-form form .label {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-section-form form .label h5 {
+  padding: 0 50px;
+  line-height: 1.25;
+  margin: 0 0 1em 0;
+  color: #0a0a0a;
+  border-bottom: 2px solid #0c0c0c;
+}
+
+.contact-section-form form input, .contact-section-form form textarea {
+  background-color: #ffefd3;
+  outline: none;
+  border: 2px solid #0c0c0c;
+  border-radius: 2px;
+  font-family: monospace;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  resize: none;
+  font-size: 28px;
+}
+
+.contact-section-form form .email-label {
+  width: 80%;
+  height: 100%;
+}
+
+.contact-section-form form .message-label {
+  height: 100%;
+  width: 100%;
+}
+
+.contact-section-form form input:focus, .contact-section-form form textarea:focus {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.9) -10px 10px 0 0;
+          box-shadow: rgba(0, 0, 0, 0.9) -10px 10px 0 0;
+  -webkit-transform: translate(5px, -5px);
+          transform: translate(5px, -5px);
+}
+
+.contact-section-form form input::-webkit-input-placeholder {
+  color: black;
+  font-weight: 900;
+}
+
+.contact-section-form form input:-ms-input-placeholder {
+  color: black;
+  font-weight: 900;
+}
+
+.contact-section-form form input::-ms-input-placeholder {
+  color: black;
+  font-weight: 900;
+}
+
+.contact-section-form form input::placeholder {
+  color: black;
+  font-weight: 900;
+}
+
+.contact-section-form form .email-input {
+  width: 80%;
+  height: 25%;
+  margin: 0;
+}
+
+.contact-section-form form .message-input {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.contact-section-form form .button-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 40%;
+}
+
+.contact-section-form form .button-wrap button {
+  height: 3em;
+  width: 10em;
+  border-radius: 2px;
+  border: 2px solid #0c0c0c;
+  background-color: #ffefd3;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 0 0;
+          box-shadow: rgba(0, 0, 0, 0.9) 0 0 0 0;
+}
+
+.contact-section-form form .button-wrap button:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.9) -4px 4px 0 0;
+          box-shadow: rgba(0, 0, 0, 0.9) -4px 4px 0 0;
+  -webkit-transform: translate(2px, -2px);
+          transform: translate(2px, -2px);
 }
 
 @media only screen and (max-width: 1200px) {
