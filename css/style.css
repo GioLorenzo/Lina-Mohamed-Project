@@ -914,10 +914,17 @@ span.up {
   font-size: 6rem;
   color: #0e0e0e;
   margin: 0;
-  padding: 0 0 1rem 0;
-  line-height: 1;
+  padding: 0;
+  line-height: .8;
   letter-spacing: -.2rem;
   text-align: left;
+  overflow: hidden;
+}
+
+.contact-section-text h3 span {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  display: inline-block;
 }
 
 .contact-section-text div {
@@ -926,13 +933,21 @@ span.up {
 }
 
 .contact-section-text p {
-  font-size: 2em;
-  line-height: 1.2;
+  position: relative;
   text-align: left;
   padding: 0;
-  margin: 0 0 0 0;
+  margin: 0;
   font-weight: 900;
+  overflow: hidden;
+}
+
+.contact-section-text p span {
+  line-height: 1.5;
   letter-spacing: -0.07rem;
+  font-size: 2rem;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  display: inline-block;
 }
 
 .contact-section-form {

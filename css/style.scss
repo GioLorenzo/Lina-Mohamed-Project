@@ -333,6 +333,7 @@ span.up {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .contact-section-text {
@@ -344,23 +345,34 @@ span.up {
     font-size: 6rem;
     color: #0e0e0e;
     margin: 0;
-    padding: 0 0 1rem 0;
-    line-height: 1;
+    padding: 0;
+    line-height: .8;
     letter-spacing: -.2rem;
     text-align: left;
+    overflow: hidden;
+    span {
+      transform: translateY(100%);
+      display: inline-block;
+    }
   }
   div {
     position: absolute;
     bottom: 0px;
   }
   p {
-    font-size: 2em;
-    line-height: 1.2;
+    position: relative;
     text-align: left;
     padding: 0;
-    margin: 0 0 0 0;
+    margin: 0;
     font-weight: 900;
-    letter-spacing: -0.07rem;
+    overflow: hidden;
+    span {
+      line-height: 1.5;
+      letter-spacing: -0.07rem;
+      font-size: 2rem;
+      transform: translateY(100%);
+      display: inline-block;
+    }
   }
 }
 

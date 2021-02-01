@@ -1,13 +1,16 @@
 const headline = document.querySelectorAll('.up');
 const nav = document.querySelector('.nav');
+const navBio = document.querySelector('.bio-a')
 const subName = document.querySelector('.sub-name');
 const bottomLText = document.querySelector('.bottom-l-text span');
 const spans = document.querySelectorAll(".span-wrap span");
+const contactSpans = document.querySelectorAll(".contact-span-wrap span");
+const firstContactSpan = document.querySelector(".contact-span-wrap");
 const arrow = document.querySelector('.arrow');
 const selectedWorks = document.querySelector('.selected-works');
 const workContainer = document.querySelector('.work-container');
 const workSection = document.querySelector('.works');
-
+const contactSection = document.querySelector('.contact-section')
 
 window.addEventListener('load', () => {
   navLinksUp();
@@ -18,9 +21,10 @@ window.addEventListener('load', () => {
 });
 
 document.querySelector('.work-a').addEventListener('click', () => smoothScroll(workSection, 1000));
+document.querySelector('.contact-a').addEventListener('click', () => smoothScroll(contactSection, 1500));
 
 function smoothScroll(target,duration){
-    var targetPosition = target.getBoundingClientRect().top;
+    var targetPosition = target.getBoundingClientRect().top + 200;
     var startPosition = window.pageYOffset;
     var distance = targetPosition - startPosition;
     var startTime = null;
@@ -70,6 +74,15 @@ const spansUp = () => {
   })
 }
 
+const contactSpansUp = () => {
+  contactSpans.forEach((x, i) => {
+    setTimeout(() => {
+      x.style.transition = 'transform 1000ms ease';
+      x.style.transform = 'translate(0, 0)';
+    }, i * 300)
+  })
+}
+
 const arrowUp = () => {
   arrow.style.transition = 'transform 1000ms ease';
   arrow.style.transform = 'translate(0, 0)';
@@ -86,13 +99,26 @@ const workContainerUp = () => {
   workContainer.style.opacity = '1';
   workContainer.style.transform = 'translateY(0)';
 }
+  
+
+const focusBio = () => {
+  if (window.scrollY === 0) {
+    navBio.focus();
+  }
+}
+
+window.addEventListener('scroll', focusBio);
+
+window.addEventListener('scroll', scrollAppear);
+
+
 
 function scrollAppear() {
   selectedWorksListen();
   workContainerListen();
+  contactSpanListen()
 }
 
-window.addEventListener('scroll', scrollAppear);
 
 function selectedWorksListen() {
   const selectedWorksPosition = selectedWorks.getBoundingClientRect().top;
@@ -107,6 +133,14 @@ function workContainerListen() {
   const screenPosition = window.innerHeight / 1.3;
   if (workContainerPosition < screenPosition) {
     workContainerUp();
+  }
+}
+
+function contactSpanListen() {
+  const contactSpanPosition = firstContactSpan.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.2;
+  if (contactSpanPosition < screenPosition) {
+    contactSpansUp();
   }
 }
 
