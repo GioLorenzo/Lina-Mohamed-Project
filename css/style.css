@@ -812,6 +812,7 @@ span.up {
   position: fixed;
   left: -1000px;
   top: -1000px;
+  overflow: hidden;
 }
 
 .work-headline {
@@ -819,6 +820,7 @@ span.up {
   padding: 0;
   width: calc(100% - 250px);
   overflow: hidden;
+  line-height: 1;
 }
 
 .work-headline h3 {
@@ -843,6 +845,8 @@ span.up {
   grid-gap: 2em;
   -ms-grid-columns: (minmax(23em, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
+  -ms-grid-rows: (minmax(10vh, auto))[autofit];
+      grid-template-rows: repeat(autofit, minmax(10vh, auto));
   position: relative;
   z-index: 1;
   opacity: 0;
@@ -874,7 +878,7 @@ span.up {
 }
 
 #contact-section {
-  width: 100vw;
+  width: 99vw;
   height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
