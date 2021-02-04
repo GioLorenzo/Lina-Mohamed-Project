@@ -484,14 +484,14 @@ footer {
 }
 
 .footer-content h6 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   opacity: 1;
   z-index: 99;
   color: #fff3df;
   font-size: 18px;
   font-weight: 100;
+  width: 300px;
+  height: 1em;
+  display: inline;
 }
 
 header,
@@ -583,10 +583,13 @@ header,
   color: #fff3df;
   cursor: pointer;
   z-index: 99;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .footer-link-wrap a i {
-  padding: 20px 20px 5px 20px;
+  padding: 0 0 6px 1rem;
 }
 
 .nav a,
@@ -620,13 +623,10 @@ header,
 .footer-link-wrap a::before {
   content: "";
   position: absolute;
-  width: 50%;
+  width: 100%;
   height: 3px;
   bottom: 0;
-  margin: 0 25%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  left: 0;
   background: #fff3df;
   visibility: hidden;
   border-radius: 50px;
