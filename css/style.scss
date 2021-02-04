@@ -27,10 +27,41 @@ body {
   height: 100vh;
 }
 
-header {
+footer {
+  height: 15vh;
+  background-color: #0e0e0e;
+  color: rgb(255, 243, 223);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  width: calc(100% - 250px);
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h6 {
+    flex: 1;
+    opacity: 1;
+    z-index: 99;
+    color: rgb(255, 243, 223);
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
+
+
+header,
+.footer-content {
   overflow: hidden;
 }
 
+.footer-link-wrap {
+  display: flex;
+  justify-content: space-between;
+}
 .nav {
   display: flex;
   line-height: 1.2;
@@ -43,6 +74,7 @@ header {
 .bio-work-wrap {
   display: flex;
   width: 150px;
+  height: 100%;
   justify-content: space-between;
 }
 
@@ -59,19 +91,44 @@ header {
 }
 
 .nav a:hover::before,
-.nav a:focus::before {
+.nav a:focus::before,
+.footer-link-wrap a:hover::before, 
+.footer-link-wrap a:focus::before {
   visibility: visible;
   transform: scaleX(1);
   z-index: 99;
 }
 
 .nav a {
+  color: #080808;
+  margin: 0;
+}
+
+.footer-link-wrap .bio {
+  height: 110%;
+  line-height: 2;
+  padding-bottom: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-link-wrap a {
+  color: rgb(255, 243, 223);
+  cursor: pointer;
+  z-index: 99;
+  i {
+    padding: 20px 20px 5px 20px;
+  }
+}
+
+.nav a,
+.footer-link-wrap a {
   height: 100%;
   width: 100%;
   padding: 0;
-  margin: 0;
+  
   text-decoration: none;
-  color: black;
   line-height: 100%;
   display: inline-block;
   transform-origin: top;
@@ -87,13 +144,30 @@ header {
   left: 0;
   background: rgb(29, 29, 29);
   visibility: hidden;
-  border-radius: 5px;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: 500ms ease;
+  
+}
+
+.footer-link-wrap a::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  bottom: 0;
+  margin: 0 25%;
+  align-self: center;
+  background: rgb(255, 243, 223);
+  visibility: hidden;
+  border-radius: 50px;
   transform: scaleX(0);
   transition: 500ms ease;
 }
 
 
-.nav a:focus {
+.nav a:focus,
+.footer-link-wrap a:focus {
   cursor: default;
   outline: none;
 }

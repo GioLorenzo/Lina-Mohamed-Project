@@ -9,8 +9,10 @@ const firstContactSpan = document.querySelector(".contact-span-wrap");
 const arrow = document.querySelector('.arrow');
 const selectedWorks = document.querySelector('.selected-works');
 const workContainer = document.querySelector('.work-container');
-const workSection = document.querySelector('.works');
+const workSection = document.getElementById('work');
 const contactSection = document.querySelector('.contact-section')
+const bioSection = document.querySelector('.bio-section')
+
 
 window.addEventListener('load', () => {
   navLinksUp();
@@ -20,8 +22,9 @@ window.addEventListener('load', () => {
   setTimeout(() => arrowUp(), 3050);
 });
 
-document.querySelector('.work-a').addEventListener('click', () => smoothScroll(workSection, 1000));
+document.querySelectorAll('.work-a').forEach(x => x.addEventListener('click', () => smoothScroll(workSection, 1000)));
 document.querySelector('.contact-a').addEventListener('click', () => smoothScroll(contactSection, 1500));
+navBio.addEventListener('click', () => smoothScroll(bioSection, 2000));
 
 function smoothScroll(target,duration){
     var targetPosition = target.getBoundingClientRect().top + 200;
