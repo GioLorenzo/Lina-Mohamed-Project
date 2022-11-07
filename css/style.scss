@@ -179,13 +179,15 @@ header,
 .headline-wrap {
   width: 100%;
   text-align: right;
+
 }
 
 .headline-wrap h1 {
   position: relative;
   overflow: hidden;
-  line-height: .8;
-  margin: 120px 0 0 0;
+  line-height: auto;
+  margin: 2rem 0 0 0;
+  padding: 0;
 }
 
 
@@ -333,7 +335,7 @@ span.up {
   height: 300vh;
   width: 300vw;
   /* We're using opacity in place of a transparent image */
-  opacity: 0.03;
+  opacity: 0.07;
   /* We'll need this when the animation kicks in to hold the position of the texture */
   position: fixed;
   left: -1000px;
@@ -343,8 +345,8 @@ span.up {
 
 
 .work-headline {
-  margin: 250px 0 0 0;
-  padding: 0;
+  margin: 270px  0 0;
+  padding: 10px 0 10px 0;
   width: calc(100% - 250px);
   overflow: hidden;
   line-height: 1;
@@ -353,9 +355,9 @@ span.up {
 .work-headline h3 {
   letter-spacing: -0.2rem;
   color:  rgb(255, 243, 223);
-  float: right;
-  padding: 0 5px 0 0;
-  font-size: 6rem;
+  text-align: right;
+  padding: 0 10px 0 0;
+  font-size: 5rem;
   font-weight: 1000;
   transform: translate(0, 100%);
   height: 100%;
