@@ -1,4 +1,4 @@
-# Lina-Mohamed-Project
+# Morrison-Management-Group-Project
 
 ──────────────────██████────────────────
 ─────────────────████████─█─────────────
